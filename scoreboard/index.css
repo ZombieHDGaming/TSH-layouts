@@ -250,6 +250,25 @@ body {
 .sf6 .p1.player.container > div:not(.score) { transform: skewX(-35deg); }
 .sf6 .p2.player.container > div:not(.score) { transform: skewX(35deg); }
 
+/* --- Tokon --- */
+.tokon .player.container {
+  top: 12px;
+  height: 56px;
+  width: 544px;
+  transform: skewX(35deg);
+  border-radius: var(--border-radius-chip);
+  padding: 0 16px;
+}
+
+.tokon .p1.container { left: 175px; }
+.tokon .p2.container {
+  transform: skewX(-35deg);
+  right: 175px;
+}
+
+.tokon .p1.player.container > div:not(.score) { transform: skewX(-35deg); }
+.tokon .p2.player.container > div:not(.score) { transform: skewX(35deg); }
+
 /* --- Pocket Bravery --- */
 .pbrave .player.container {
   width: 622px;
@@ -357,6 +376,7 @@ body {
 }
 
 .sf6 .score  { font-size: 34px; }
+.tokon .score  { font-size: 40px; }
 .roa2 .score { height: 110px; font-size: 50px; }
 
 .tekken8 .score       { font-size: 38px; width: 80px; }
@@ -365,6 +385,9 @@ body {
 
 .sf6 .p1 .score { margin-right: -16px; margin-left: 16px; }
 .sf6 .p2 .score { margin-left: -16px; margin-right: 16px; }
+
+.tokon .p1 .score { margin-right: -16px; margin-left: 16px; }
+.tokon .p2 .score { margin-left: -16px; margin-right: 16px; }
 
 /* Losers bracket indicator dot */
 .losers {
@@ -497,6 +520,7 @@ body {
 
 /* --- Per-game name sizes --- */
 .sf6     .name_twitter .name { max-width: 100%; font-size: 30px; }
+.tokon   .name_twitter .name { max-width: 100%; font-size: 30px; }
 .tekken8 .name_twitter .name { max-width: 100%; font-size: 32px; }
 .roa2    .name_twitter .name { max-width: 100%; font-size: 40px; }
 .mk1     .name_twitter .name { max-width: 100%; font-size: 30px; }
@@ -507,6 +531,8 @@ body {
 .tekken8 .p2 .name_twitter, .tekken8 .p2 .score > .text { transform: skewX(45deg); }
 .sf6     .p1 .name_twitter, .sf6     .p1 .score > .text { transform: skewX(-35deg); }
 .sf6     .p2 .name_twitter, .sf6     .p2 .score > .text { transform: skewX(35deg); }
+.tokon   .p1 .name_twitter, .tokon   .p1 .score > .text { transform: skewX(-35deg); }
+.tokon   .p2 .name_twitter, .tokon   .p2 .score > .text { transform: skewX(35deg); }
 
 
 /* ── 7. Chips ────────────────────────────────────────────── */
@@ -571,6 +597,14 @@ body {
 .nasb2 .chips         { top: 137px; }
 .nasb2 .p1.chips      { left: 350px; }
 .nasb2 .p2.chips      { left: unset; right: 350px; }
+
+/* ---  TOKON --- */
+/* offline — container skewed, chips counter-skewed (same pattern as online) */
+.tokon .chips        { width: 450px; /*top: 1055px;*/ }
+.tokon .p1.chips     { left: 235px; justify-content: left; transform: skewX(35deg); }
+.tokon .p2.chips     { left: unset; right: 235px; justify-content: right; transform: skewX(-35deg); }
+.tokon .p1 .chip     { transform: skewX(-35deg); }
+.tokon .p2 .chip     { transform: skewX(35deg); }
 
 /* --- SF6 shared --- */
 .sf6 .chips                { top: 106px; height: 32px; overflow: visible; }
@@ -767,6 +801,15 @@ body {
   letter-spacing: 1px;
 }
 
+/* Tokon — horizontal flag + code, larger text */
+.tokon .flagcountry .text,
+.tokon .flagstate   .text {
+  flex-direction: row;
+  gap: 5px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
 /* ARMS — horizontal flag + code like SF6 */
 .arms .flagcountry .text,
 .arms .flagstate   .text {
@@ -844,6 +887,7 @@ body {
 .thin      .icon { border-radius: 8px; }
 .fgc.thin  .icon { width: 38px; height: 38px; }
 .sf6       .icon { width: 42px; height: 42px; }
+.tokon     .icon { width: 42px; height: 42px; }
 .roa2      .icon { width: 70px; height: 70px; }
 
 
@@ -921,6 +965,7 @@ body {
 .fgc.thin.bblue  .logo { top: 970px; }
 
 .sf6      .logo { width: 80px; height: 80px; top: 924px; }
+.tokon    .logo { width: 80px; height: 80px; top: 150px; }
 .roa2     .logo { width: 80px; height: 80px; top: 130px; }
 .mk1      .logo { width: 80px; height: 80px; top: unset; bottom: 90px; }
 .pokken   .logo { width: 80px; height: 80px; top: unset; bottom: 10px; }
@@ -964,6 +1009,7 @@ body {
 .roa2    .tournament_name { font-size: 30px; width: 100%; height: 100%; }
 .tekken8 .tournament_name { height: unset; font-size: 24px; }
 .sf6     .tournament_name { height: unset; font-size: 24px; }
+.tokon   .tournament_name { height: unset; font-size: 24px; }
 
 /* Phase / Match labels */
 .phase {
@@ -973,6 +1019,7 @@ body {
 }
 
 .sf6     .phase { font-size: 20px; letter-spacing: 2px; }
+.tokon   .phase { font-size: 20px; letter-spacing: 2px; }
 .roa2    .phase { font-size: 20px; letter-spacing: 2px; }
 .tekken8 .phase { font-size: 20px; }
 
@@ -983,6 +1030,7 @@ body {
 }
 
 .sf6  .match { font-size: 26px; letter-spacing: 2px; }
+.tokon  .match { font-size: 26px; letter-spacing: 2px; }
 
 /* --- Info top panel --- */
 .info.container.top {
@@ -1057,6 +1105,18 @@ body {
   padding: 0 42px;
   width: 470px;
   top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  height: 28px;
+}
+
+.tokon .info.container.top {
+  background: unset;
+  overflow: visible;
+  justify-content: center;
+  padding: 0 42px;
+  width: 470px;
+  top: -2px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
   height: 28px;
@@ -1208,6 +1268,21 @@ body {
   justify-content: center;
 }
 
+.tokon .info.container.bottom {
+  border-radius: calc(var(--border-radius) / 2);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  top: unset;
+  bottom: -1px;
+  width: 400px;
+  height: 32px;
+  background: unset;
+  overflow: visible;
+  padding: 0 42px;
+  justify-content: center;
+  /* opacity: 25%; */
+}
+
 .bblue .info.container.bottom {
   top: 180px;
   bottom: unset;
@@ -1355,6 +1430,11 @@ body {
 .sf6 .sponsor_icon > div > div,
 .sf6 .sponsor_icon .text   { width: 100px; height: 100px; }
 
+.tokon .sponsor_icon         { position: absolute; right: 90px;  z-index: -999; opacity: 0.5; }
+.tokon .p2 .sponsor_icon     { right: unset; left: 90px; }
+.tokon .sponsor_icon > div > div,
+.tokon .sponsor_icon .text   { width: 100px; height: 100px; }
+
 .thin .sponsor_icon        { position: absolute; right: 200px; z-index: -999; opacity: 0.5; }
 .thin .p2 .sponsor_icon    { right: unset; left: 200px; }
 .thin .sponsor_icon > div > div,
@@ -1422,3 +1502,8 @@ body {
 .sf6 .top_bg_2    { transform: skewX(-35deg); }
 .sf6 .bottom_bg_1 { transform: skewX(35deg); }
 .sf6 .bottom_bg_2 { transform: skewX(-35deg); }
+
+.tokon .top_bg_1    { transform: skewX(35deg); }
+.tokon .top_bg_2    { transform: skewX(-35deg); }
+.tokon .bottom_bg_1 { transform: skewX(35deg); }
+.tokon .bottom_bg_2 { transform: skewX(-35deg); }
